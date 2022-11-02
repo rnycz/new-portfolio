@@ -1,0 +1,77 @@
+.menu {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: auto;
+}
+.menu a {
+  position: absolute;
+  left: 0px;
+  transition: 0.6s;
+}
+.menu li {
+  position: absolute;
+  left: 0px;
+  list-style: none;
+  transition: 0.6s;
+  transform-origin: 200px;
+  transform: rotate(90deg) translateX(130px);
+}
+.menu li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background: #fff7e9;
+  color: var(--clr);
+  border: 3px solid var(--clr);
+  border-radius: 50%;
+  font-size: 2em;
+  transform: rotate(calc(-90deg * var(--rotate)));
+  transition: 0.8s all;
+  cursor: pointer;
+}
+.menu li button:hover {
+  background: var(--clr);
+  color: black;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+.menu .menu-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 75px;
+  height: 75px;
+  background-color: #181d50;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #181d50, 0 0 20px #181d50;
+  transition: 0.5s transform;
+}
+.menu .menu-toggle:hover {
+  transform: rotate(180deg);
+}
+
+.active li {
+  transform: rotate(calc(90deg * var(--rotate))) translateX(40px);
+}
+.active a {
+  transform: translateY(-33px);
+}
+
+@media (max-width: 480px) {
+  .menu {
+    width: 250px;
+  }
+  .menu a {
+    left: -75px !important;
+  }
+  .active li {
+    transform: rotate(calc(90deg * var(--rotate))) translateX(70px);
+  }
+}/*# sourceMappingURL=Menu.css.map */

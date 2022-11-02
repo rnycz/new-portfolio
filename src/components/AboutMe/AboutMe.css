@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.aboutme-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.aboutme-container .aboutme {
+  flex: 1 350px;
+  color: #fff7e9;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+.aboutme-container .aboutme p {
+  line-height: 1.6em;
+  text-align: justify;
+}
+.aboutme-container .photo {
+  flex: 1 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme-container .photo .image-wrapper {
+  width: 200px;
+  height: 250px;
+  position: relative;
+}
+.aboutme-container .photo .image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.image-1 {
+  -webkit-clip-path: polygon(30% 0, 0 30%, 0 0);
+          clip-path: polygon(30% 0, 0 30%, 0 0);
+  transform: translate(-8px, -8px);
+  transition: transform 0.3s ease;
+}
+.image-wrapper:hover .image-1 {
+  transform: translate(0, 0);
+}
+
+.image-2 {
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
+          clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
+}
+
+.image-3 {
+  -webkit-clip-path: polygon(100% 70%, 70% 100%, 100% 100%);
+          clip-path: polygon(100% 70%, 70% 100%, 100% 100%);
+  transform: translate(8px, 8px);
+  transition: transform 0.3s ease;
+}
+.image-wrapper:hover .image-3 {
+  transform: translate(0, 0);
+}/*# sourceMappingURL=AboutMe.css.map */
