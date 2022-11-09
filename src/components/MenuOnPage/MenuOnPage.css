@@ -1,0 +1,91 @@
+span {
+  cursor: pointer;
+  color: #c5c5c5;
+  transition: 0.3s color;
+  position: relative;
+}
+span:hover {
+  color: #fff7e9;
+}
+
+.menu-page {
+  transition: 0.3s all ease-in-out;
+  z-index: 10;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: #1e1f23;
+  border-bottom-right-radius: 50%;
+  box-shadow: 5px 5px 3px #1e1f23;
+}
+.menu-page span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.menu-page ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.menu-page ul a {
+  position: absolute;
+}
+.menu-page ul a:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 45px;
+  top: 45px;
+  width: 50px;
+  height: 50px;
+  background: #fff7e9;
+  color: gray;
+  border: 2px solid gray;
+  border-radius: 50%;
+  font-size: 1em;
+  transition: 0.8s all;
+}
+.menu-page ul a:nth-child(1):hover {
+  background: gray;
+  color: black;
+  box-shadow: 0 0 8px gray, 0 0 9px gray, 0 0 10px gray;
+}
+.menu-page ul a:nth-child(2) {
+  left: 10px;
+  top: 130px;
+}
+.menu-page ul a:nth-child(3) {
+  left: 130px;
+  top: 10px;
+}
+.menu-page ul a:nth-child(4) {
+  left: 75px;
+  top: 120px;
+}
+.menu-page ul a:nth-child(5) {
+  left: 120px;
+  top: 75px;
+}
+.menu-page ul li {
+  list-style-type: none;
+}
+.menu-page ul li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #fff7e9;
+  color: var(--clr);
+  border: 2px solid var(--clr);
+  border-radius: 50%;
+  font-size: 1em;
+  transition: 0.8s all;
+  cursor: pointer;
+}
+.menu-page ul li button:hover {
+  background: var(--clr);
+  color: black;
+  box-shadow: 0 0 8px var(--clr), 0 0 9px var(--clr), 0 0 10px var(--clr);
+}/*# sourceMappingURL=MenuOnPage.css.map */

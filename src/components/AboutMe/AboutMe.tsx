@@ -1,5 +1,5 @@
 import React from "react";
-import myPhoto from "../../assets/myPhoto.png";
+import myPhoto from "../../assets/images/myPhoto.png";
 import { useStateContext } from "../../contexts/ContextProvider";
 import { translation } from "../../assets/translations";
 import "./AboutMe.css";

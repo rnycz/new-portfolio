@@ -1,0 +1,100 @@
+.work-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #fff7e9;
+  .work-projects {
+    flex: 1 200px;
+    height: 100%;
+    color: #fff7e9;
+    ul {
+      list-style-type: none;
+      padding-left: 10px;
+      width: 80%;
+      li {
+        padding: 5px 10px;
+        transition: 0.5s all ease-out;
+        border-bottom: 2px solid #fff7e9;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        &:first-child {
+          border-top: 2px solid #fff7e9;
+        }
+        &::before {
+          width: 1px;
+          content: "\21E8";
+          color: #c5c5c5;
+          font-size: 2em;
+          opacity: 0;
+          transform: translateX(-20px);
+          transition: 0.5s all ease-out;
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+            transform: none;
+          }
+          a {
+            padding-left: 30px;
+            color: #c5c5c5;
+          }
+        }
+        a {
+          transition: 0.5s all ease-out;
+          text-decoration: none;
+          color: #fff7e9;
+        }
+      }
+    }
+  }
+  .work-images {
+    flex: 1 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .projects-image-wrapper {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: 0.8s all;
+      img {
+        width: 80%;
+        border-radius: 5px;
+      }
+      p {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .work-container {
+    flex-direction: column;
+    .work-images {
+      .projects-image-wrapper {
+        img {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .work-container {
+    .work-images {
+      .projects-image-wrapper {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
