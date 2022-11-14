@@ -16,6 +16,7 @@ const Work: React.FC = () => {
             <li
               onMouseEnter={() => setOpen(project.name)}
               onMouseLeave={unHover}
+              key={project.name}
             >
               <a href={project.git} target="_blank" rel="noreferrer">
                 {project.name}
@@ -32,6 +33,7 @@ const Work: React.FC = () => {
               opacity: open === project.name ? 1 : 0,
               transform: `scale(${open === project.name ? 1 : 0.9})`,
             }}
+            key={project.name}
           >
             <img src={project.image} alt={project.name} />
             <p>{project.desc}</p>

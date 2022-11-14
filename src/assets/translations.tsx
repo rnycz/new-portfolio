@@ -1,5 +1,5 @@
 type Translation = {
-  aboutMe?: {
+  aboutMe: {
     en: {
       p1: string;
       p2: string;
@@ -11,12 +11,20 @@ type Translation = {
       p3: string;
     };
   };
-  contact?: {
+  contact: {
     en: {
       info: string;
     };
     pl: {
       info: string;
+    };
+  };
+  skills: {
+    en: {
+      desc: string;
+    };
+    pl: {
+      desc: string;
     };
   };
 };
@@ -40,6 +48,14 @@ export let translation: Translation = {
     },
     pl: {
       info: "Email skopiownany do schowka",
+    },
+  },
+  skills: {
+    en: {
+      desc: "My main area of interest is front-end development - building small and medium web applications using the React library. Additionally, in the projects I create, I like to use the available APIs or create my own for my own needs.",
+    },
+    pl: {
+      desc: "Głównym obszarem mojego zainteresowania jest front-end development - budowanie małych i średnich aplikacji internetowych z wykorzystaniem biblioteki React. Dodatkowo w projektach które tworze, lubię skorzystać z dostępnych API lub stworzyć swoje na własne potrzeby.",
     },
   },
 };

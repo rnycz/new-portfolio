@@ -1,0 +1,106 @@
+.skills-container {
+  font-family: "Montserrat", sans-serif;
+  color: #fff7e9;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .desc {
+    padding: 20px 15px;
+    margin: 0px 20px;
+    border-left: 2px solid #fff7e9;
+    line-height: 1.4em;
+  }
+  .icons {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding: 10px;
+        font-size: 4em;
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.3s color;
+          color: var(--clr);
+          &:hover {
+            color: #fff7e9;
+          }
+        }
+      }
+    }
+  }
+  .stack {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    div {
+      flex: 1 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        margin: 10px 0 0 0;
+      }
+      ol {
+        list-style-type: none;
+        padding: 0;
+        width: 190px;
+        counter-reset: li;
+        li {
+          padding: 10px;
+          border-bottom: 2px solid rgb(197, 197, 197, 0.3);
+          position: relative;
+          &:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            margin-top: -16px;
+            background: #5f9df7;
+            height: 32px;
+            width: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-weight: bold;
+          }
+          &:after {
+            position: absolute;
+            content: "";
+            border: 8px solid transparent;
+            left: -16px;
+            top: 50%;
+            margin-top: -8px;
+            transition: all 0.3s ease-out;
+          }
+          &:hover:after {
+            left: -8px;
+            border-left-color: #5f9df7;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .skills-container {
+    .desc {
+      margin: 0 5px;
+      padding: 10px 0px 10px 10px;
+    }
+    .icons {
+      ul {
+        li {
+          font-size: 3.5em;
+        }
+      }
+    }
+  }
+}

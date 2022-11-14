@@ -1,10 +1,10 @@
-span {
+header span {
   cursor: pointer;
   color: #c5c5c5;
   transition: 0.3s color;
   position: relative;
 }
-span:hover {
+header span:hover {
   color: #fff7e9;
 }
 

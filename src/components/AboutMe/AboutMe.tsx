@@ -9,8 +9,8 @@ const AboutMe: React.FC = () => {
   let content: any;
 
   language === "EN"
-    ? (content = translation.aboutMe?.en)
-    : (content = translation.aboutMe?.pl);
+    ? (content = translation.aboutMe.en)
+    : (content = translation.aboutMe.pl);
 
   return (
     <div className="aboutme-container">

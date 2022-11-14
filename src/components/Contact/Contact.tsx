@@ -11,8 +11,8 @@ const Contact: React.FC = () => {
   let content: any;
 
   language === "EN"
-    ? (content = translation.contact?.en)
-    : (content = translation.contact?.pl);
+    ? (content = translation.contact.en)
+    : (content = translation.contact.pl);
 
   const mail: string = "radeknycz98@gmail.com";
   const [copied, setCopied] = useState<boolean>(false);

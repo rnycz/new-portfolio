@@ -2,7 +2,12 @@ import React from "react";
 import Menu from "../components/Menu/Menu";
 
 const MainPage: React.FC = () => {
-  return <Menu />;
+  return (
+    <>
+      <span className="welcome">WELCOME</span>
+      <Menu />
+    </>
+  );
 };
 
 export default MainPage;

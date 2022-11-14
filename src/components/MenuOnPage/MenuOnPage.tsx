@@ -5,7 +5,7 @@ import { ImCross } from "react-icons/im";
 import { links } from "../../assets/links";
 import { BsSkipBackwardCircle } from "react-icons/bs";
 
-const MenuOnPage = () => {
+const MenuOnPage: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (

@@ -84,6 +84,9 @@
   }
 }
 @media screen and (max-width: 550px) {
+  .work-container .work-projects ul {
+    width: 100%;
+  }
   .work-container .work-images .projects-image-wrapper img {
     width: 100%;
   }

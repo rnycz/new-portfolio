@@ -1,10 +1,12 @@
-span {
-  cursor: pointer;
-  color: #c5c5c5;
-  transition: 0.3s color;
-  position: relative;
-  &:hover {
-    color: #fff7e9;
+header {
+  span {
+    cursor: pointer;
+    color: #c5c5c5;
+    transition: 0.3s color;
+    position: relative;
+    &:hover {
+      color: #fff7e9;
+    }
   }
 }
 

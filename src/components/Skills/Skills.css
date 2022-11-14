@@ -1,0 +1,98 @@
+.skills-container {
+  font-family: "Montserrat", sans-serif;
+  color: #fff7e9;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.skills-container .desc {
+  padding: 20px 15px;
+  margin: 0px 20px;
+  border-left: 2px solid #fff7e9;
+  line-height: 1.4em;
+}
+.skills-container .icons ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.skills-container .icons ul li {
+  padding: 10px;
+  font-size: 4em;
+}
+.skills-container .icons ul li .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s color;
+  color: var(--clr);
+}
+.skills-container .icons ul li .icon:hover {
+  color: #fff7e9;
+}
+.skills-container .stack {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+.skills-container .stack div {
+  flex: 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skills-container .stack div h3 {
+  margin: 10px 0 0 0;
+}
+.skills-container .stack div ol {
+  list-style-type: none;
+  padding: 0;
+  width: 190px;
+  counter-reset: li;
+}
+.skills-container .stack div ol li {
+  padding: 10px;
+  border-bottom: 2px solid rgba(197, 197, 197, 0.3);
+  position: relative;
+}
+.skills-container .stack div ol li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  margin-top: -16px;
+  background: #5f9df7;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+.skills-container .stack div ol li:after {
+  position: absolute;
+  content: "";
+  border: 8px solid transparent;
+  left: -16px;
+  top: 50%;
+  margin-top: -8px;
+  transition: all 0.3s ease-out;
+}
+.skills-container .stack div ol li:hover:after {
+  left: -8px;
+  border-left-color: #5f9df7;
+}
+
+@media screen and (max-width: 550px) {
+  .skills-container .desc {
+    margin: 0 5px;
+    padding: 10px 0px 10px 10px;
+  }
+  .skills-container .icons ul li {
+    font-size: 3.5em;
+  }
+}/*# sourceMappingURL=Skills.css.map */
