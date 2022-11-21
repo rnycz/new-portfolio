@@ -10,13 +10,8 @@ const Menu: React.FC = () => {
   return (
     <>
       <ul className={`menu ${activeMenu ? "active" : ""}`}>
-        <div className="menu-toggle">
-          <Hamburger
-            onToggle={() => setActiveMenu(!activeMenu)}
-            size={45}
-            color="#FFF7E9"
-            label="Show menu"
-          />
+        <div className="menu-toggle" onClick={() => setActiveMenu(!activeMenu)}>
+          <Hamburger size={45} color="#FFF7E9" label="Show menu" />
         </div>
         {links.map((link) => (
           <NavLink to={`/${link.name}`} key={link.name}>

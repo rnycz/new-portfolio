@@ -2,8 +2,7 @@ import React, { CSSProperties } from "react";
 import "./Skills.css";
 import { translation } from "../../assets/translations";
 import { useStateContext } from "../../contexts/ContextProvider";
-import { skillsIcons } from "../../assets/skillsIcons";
-import { link } from "fs";
+import { skills, otherSkills } from "../../assets/skills";
 
 const Skills: React.FC = () => {
   const { language } = useStateContext();
@@ -18,7 +17,7 @@ const Skills: React.FC = () => {
       <div className="desc">{content.desc}</div>
       <div className="icons">
         <ul>
-          {skillsIcons.map((skill) => (
+          {skills.map((skill) => (
             <li key={skill.clr}>
               <span
                 className="icon"
@@ -34,8 +33,8 @@ const Skills: React.FC = () => {
         <div className="frontend">
           <h3>Frontend</h3>
           <ol>
-            <li>HTML</li>
-            <li>CSS/SCSS</li>
+            <li>HTML5</li>
+            <li>CSS3/SCSS</li>
             <li>JavaScript/TypeScript</li>
             <li>React.js</li>
           </ol>
@@ -48,6 +47,22 @@ const Skills: React.FC = () => {
             <li>MongoDB</li>
           </ol>
         </div>
+      </div>
+      <div className="other-stack">
+        <h3>Other tools and technologies</h3>
+        <ul>
+          {otherSkills.map((skill) => (
+            <li>
+              <span
+                className="icon"
+                style={{ "--clr": skill.clr } as CSSProperties}
+              >
+                {skill.icon}
+              </span>
+              <span className="name">{skill.name}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

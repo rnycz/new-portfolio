@@ -52,8 +52,9 @@
     border-radius: 50%;
     box-shadow: 0 0 3px 3px #181d50;
     transition: 0.5s transform;
+    cursor: pointer;
     &:hover {
-      transform: rotate(180deg);
+      transform: scale(1.1);
     }
   }
 }

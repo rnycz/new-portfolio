@@ -7,6 +7,7 @@ import { BsSkipBackwardCircle } from "react-icons/bs";
 
 const MenuOnPage: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [active, setActive] = useState<string>("");
 
   return (
     <>
@@ -32,7 +33,15 @@ const MenuOnPage: React.FC = () => {
           {links.map((link) => (
             <NavLink to={`/${link.name}`} key={link.name}>
               <li style={{ "--clr": link.clr } as CSSProperties}>
-                <button onClick={() => setOpenMenu(false)}>{link.icon}</button>
+                <button
+                  onClick={() => {
+                    setOpenMenu(false);
+                    setActive(link.name);
+                  }}
+                  className={`${active === link.name && "active"}`}
+                >
+                  {link.icon}
+                </button>
               </li>
             </NavLink>
           ))}

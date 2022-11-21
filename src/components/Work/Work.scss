@@ -1,87 +1,118 @@
 .work-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 10px;
   height: 100%;
   font-family: "Montserrat", sans-serif;
   color: #fff7e9;
-  .work-projects {
-    flex: 1 200px;
-    height: 100%;
-    color: #fff7e9;
-    ul {
-      list-style-type: none;
-      padding-left: 10px;
-      width: 80%;
-      li {
-        padding: 5px 10px;
-        transition: 0.5s all ease-out;
-        border-bottom: 2px solid #fff7e9;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
-        &:first-child {
-          border-top: 2px solid #fff7e9;
-        }
-        &::before {
-          width: 1px;
-          content: "\21E8";
-          color: #c5c5c5;
-          font-size: 2em;
-          opacity: 0;
-          transform: translateX(-20px);
-          transition: 0.5s all ease-out;
-        }
-        &:hover {
-          &::before {
-            opacity: 1;
-            transform: none;
-          }
-          a {
-            padding-left: 30px;
-            color: #c5c5c5;
-          }
-        }
-        a {
-          transition: 0.5s all ease-out;
-          text-decoration: none;
-          color: #fff7e9;
-        }
+  .work-exp {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      text-align: center;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 15px;
+      margin: 0px 20px;
+      border-left: 2px solid #fff7e9;
+      gap: 7px;
+      span {
+        line-height: 1.4em;
       }
     }
   }
-  .work-images {
-    flex: 1 400px;
-    position: relative;
+  .work-projects {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .projects-image-wrapper {
-      position: absolute;
+    flex-direction: row;
+    .projects {
+      flex: 1 200px;
+      height: 100%;
+      color: #fff7e9;
+      h3 {
+        text-align: center;
+        width: 80%;
+      }
+      ul {
+        list-style-type: none;
+        width: 80%;
+        padding: 0;
+        li {
+          padding: 5px 10px;
+          transition: 0.5s all ease-out;
+          border-bottom: 2px solid #fff7e9;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+          &:first-child {
+            border-top: 2px solid #fff7e9;
+          }
+          &::before {
+            width: 1px;
+            content: "\21E8";
+            color: #c5c5c5;
+            font-size: 2em;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: 0.5s all ease-out;
+          }
+          &:hover {
+            &::before {
+              opacity: 1;
+              transform: none;
+            }
+            a {
+              padding-left: 30px;
+              color: #c5c5c5;
+            }
+          }
+          a {
+            transition: 0.5s all ease-out;
+            text-decoration: none;
+            color: #fff7e9;
+          }
+        }
+      }
+    }
+    .images {
+      flex: 1 400px;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      transition: 0.8s all;
-      img {
-        width: 80%;
-        border-radius: 5px;
-      }
-      p {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 0;
+      .image-wrapper {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.8s all;
+        img {
+          width: 80%;
+          border-radius: 5px;
+        }
+        p {
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
       }
     }
   }
 }
 @media screen and (max-width: 780px) {
   .work-container {
-    flex-direction: column;
-    .work-images {
-      .projects-image-wrapper {
-        img {
-          width: 70%;
+    .work-projects {
+      flex-direction: column;
+      gap: 10px;
+      .images {
+        flex: 1 370px;
+        .image-wrapper {
+          img {
+            width: 70%;
+          }
         }
       }
     }
@@ -89,15 +120,26 @@
 }
 @media screen and (max-width: 550px) {
   .work-container {
-    .work-projects {
-      ul {
-        width: 100%;
+    .work-exp {
+      p {
+        margin: 0 5px;
+        padding: 10px 0px 10px 10px;
       }
     }
-    .work-images {
-      .projects-image-wrapper {
-        img {
+    .work-projects {
+      .projects {
+        ul {
           width: 100%;
+        }
+        h3 {
+          width: 100%;
+        }
+      }
+      .images {
+        .image-wrapper {
+          img {
+            width: 100%;
+          }
         }
       }
     }

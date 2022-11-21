@@ -4,10 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+  font-family: "Montserrat", sans-serif;
   .aboutme {
     flex: 1 350px;
     color: #fff7e9;
-    font-family: "Montserrat", sans-serif;
     padding: 10px;
     p {
       line-height: 1.6em;
@@ -19,6 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 30px;
     .image-wrapper {
       width: 200px;
       height: 250px;
@@ -28,6 +30,27 @@
         top: 0;
         left: 0;
         border-radius: 5px;
+      }
+    }
+    .resume {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 10px;
+      a {
+        width: 95px;
+        text-align: center;
+        color: #fff7e9;
+        text-decoration: none;
+        padding: 10px;
+        transition: 0.5s all ease-in-out;
+        outline: 2px solid #ff731d;
+        border: 2px solid #ff731d;
+        outline-offset: -2px;
+        transition: outline-offset 0.2s ease-in-out;
+        &:hover {
+          outline-offset: -6px;
+        }
       }
     }
   }
