@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   const location = useLocation();
   return (
     <header>
-      {location.pathname == "/" ? (
+      {location.pathname === "/" ? (
         <NavLink to="/">&lt;rnycz&gt;</NavLink>
       ) : (
         <MenuOnPage />
