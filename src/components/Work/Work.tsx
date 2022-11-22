@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Work.css";
 import { projects } from "../../assets/projects";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { translation } from "../../assets/translations";
 import { useStateContext } from "../../contexts/ContextProvider";
 
@@ -41,6 +42,13 @@ const Work: React.FC = () => {
                 <a href={project.git} target="_blank" rel="noreferrer">
                   {project.name}
                 </a>
+                <span>
+                  {open === project.name ? (
+                    <AiFillEye className="green-eye" />
+                  ) : (
+                    <AiFillEyeInvisible className="red-eye" />
+                  )}
+                </span>
               </li>
             ))}
           </ul>

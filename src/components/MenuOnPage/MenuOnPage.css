@@ -3,6 +3,7 @@ header span {
   color: #c5c5c5;
   transition: 0.3s color;
   position: relative;
+  font-size: 1.2em;
 }
 header span:hover {
   color: #fff7e9;
@@ -22,6 +23,7 @@ header span:hover {
   position: absolute;
   top: 5px;
   left: 5px;
+  font-size: 1em;
 }
 .menu-page ul {
   padding: 0;

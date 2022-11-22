@@ -2,16 +2,20 @@ import React, { CSSProperties, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./MenuOnPage.css";
 import { ImCross } from "react-icons/im";
+import { SlMenu } from "react-icons/sl";
 import { links } from "../../assets/links";
 import { BsSkipBackwardCircle } from "react-icons/bs";
+import { useStateContext } from "../../contexts/ContextProvider";
 
 const MenuOnPage: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [active, setActive] = useState<string>("");
+  const { activePage, setActivePage } = useStateContext();
 
   return (
     <>
-      <span onClick={() => setOpenMenu(true)}>&lt;rnycz&gt;</span>
+      <span onClick={() => setOpenMenu(true)}>
+        <SlMenu />
+      </span>
       <div
         className="menu-page"
         style={{
@@ -36,9 +40,9 @@ const MenuOnPage: React.FC = () => {
                 <button
                   onClick={() => {
                     setOpenMenu(false);
-                    setActive(link.name);
+                    setActivePage(link.name);
                   }}
-                  className={`${active === link.name && "active"}`}
+                  className={`${activePage === link.name && "active"}`}
                 >
                   {link.icon}
                 </button>

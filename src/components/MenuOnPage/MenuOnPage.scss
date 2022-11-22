@@ -4,6 +4,7 @@ header {
     color: #c5c5c5;
     transition: 0.3s color;
     position: relative;
+    font-size: 1.2em;
     &:hover {
       color: #fff7e9;
     }
@@ -23,6 +24,7 @@ header {
     position: absolute;
     top: 5px;
     left: 5px;
+    font-size: 1em;
   }
   ul {
     padding: 0;

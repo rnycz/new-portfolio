@@ -3,9 +3,11 @@ import { Squash as Hamburger } from "hamburger-react";
 import { links } from "../../assets/links";
 import "./Menu.css";
 import { NavLink } from "react-router-dom";
+import { useStateContext } from "../../contexts/ContextProvider";
 
 const Menu: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<boolean>(false);
+  const { setActivePage } = useStateContext();
 
   return (
     <>
@@ -20,7 +22,13 @@ const Menu: React.FC = () => {
                 { "--rotate": link.rotate, "--clr": link.clr } as CSSProperties
               }
             >
-              <button>{link.icon}</button>
+              <button
+                onClick={() => {
+                  setActivePage(link.name);
+                }}
+              >
+                {link.icon}
+              </button>
             </li>
           </NavLink>
         ))}
