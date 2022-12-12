@@ -1,34 +1,19 @@
 header span {
-  cursor: pointer;
-  color: #c5c5c5;
-  transition: 0.3s color;
-  position: relative;
-  font-size: 1.2em;
-}
-header span:hover {
-  color: #fff7e9;
+  margin-left: -8px;
+  z-index: 11;
 }
 
-.menu-page {
+.menu-page ul {
   transition: 0.3s all ease-in-out;
-  z-index: 10;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  width: 180px;
-  height: 180px;
+  top: 0;
+  left: -10px;
   background-color: #1e1f23;
   border-bottom-right-radius: 50%;
   box-shadow: 5px 5px 3px #1e1f23;
-}
-.menu-page span {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  font-size: 1em;
-}
-.menu-page ul {
-  padding: 0;
-  margin: 0;
-  position: relative;
+  z-index: 10;
 }
 .menu-page ul a {
   position: absolute;

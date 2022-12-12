@@ -1,11 +1,10 @@
 import React, { CSSProperties, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./MenuOnPage.css";
-import { ImCross } from "react-icons/im";
-import { SlMenu } from "react-icons/sl";
 import { links } from "../../assets/links";
 import { BsSkipBackwardCircle } from "react-icons/bs";
 import { useStateContext } from "../../contexts/ContextProvider";
+import { Squash as Hamburger } from "hamburger-react";
 
 const MenuOnPage: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -13,27 +12,28 @@ const MenuOnPage: React.FC = () => {
 
   return (
     <>
-      <span onClick={() => setOpenMenu(true)}>
-        <SlMenu />
+      <span onClick={() => setOpenMenu(!openMenu)}>
+        <Hamburger
+          toggled={openMenu}
+          size={35}
+          color="#c5c5c5"
+          label="Show menu"
+          distance="lg"
+        />
       </span>
-      <div
-        className="menu-page"
-        style={{
-          opacity: openMenu ? 1 : 0,
-          transform: `scale(${openMenu ? 1 : 0})`,
-          left: openMenu ? "-10px" : "-150px",
-          top: openMenu ? "0px" : "-140px",
-        }}
-      >
-        <span onClick={() => setOpenMenu(false)}>
-          <ImCross />
-        </span>
-        <ul>
-          <li>
-            <NavLink to="/">
-              <BsSkipBackwardCircle />
-            </NavLink>
-          </li>
+      <div className="menu-page">
+        <ul
+          style={{
+            opacity: openMenu ? 1 : 0,
+            transform: `scale(${openMenu ? 1 : 0})`,
+            width: openMenu ? "185px" : "0px",
+            height: openMenu ? "185px" : "0px",
+          }}
+        >
+          <NavLink to="/">
+            <BsSkipBackwardCircle />
+          </NavLink>
+
           {links.map((link) => (
             <NavLink to={`/${link.name}`} key={link.name}>
               <li style={{ "--clr": link.clr } as CSSProperties}>

@@ -1,35 +1,22 @@
 header {
   span {
-    cursor: pointer;
-    color: #c5c5c5;
-    transition: 0.3s color;
-    position: relative;
-    font-size: 1.2em;
-    &:hover {
-      color: #fff7e9;
-    }
+    margin-left: -8px;
+    z-index: 11;
   }
 }
 
 .menu-page {
-  transition: 0.3s all ease-in-out;
-  z-index: 10;
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  background-color: #1e1f23;
-  border-bottom-right-radius: 50%;
-  box-shadow: 5px 5px 3px #1e1f23;
-  span {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    font-size: 1em;
-  }
   ul {
+    transition: 0.3s all ease-in-out;
     padding: 0;
     margin: 0;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background-color: #1e1f23;
+    border-bottom-right-radius: 50%;
+    box-shadow: 5px 5px 3px #1e1f23;
+    z-index: 10;
     a {
       position: absolute;
       &:nth-child(1) {
