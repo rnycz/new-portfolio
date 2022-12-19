@@ -22,19 +22,25 @@ type Translation = {
   skills: {
     en: {
       desc: string;
+      other: string;
     };
     pl: {
       desc: string;
+      other: string;
     };
   };
   work: {
     en: {
       scope: string;
       desc: string;
+      exp: string;
+      projects: string;
     };
     pl: {
       scope: string;
       desc: string;
+      exp: string;
+      projects: string;
     };
   };
 };
@@ -63,19 +69,25 @@ export let translation: Translation = {
   skills: {
     en: {
       desc: "My main area of interest is front-end development - building small and medium web applications using the React library. Additionally, in the projects I create, I like to use the available APIs or create my own for my own needs.",
+      other: "Other tools and technologies",
     },
     pl: {
       desc: "Głównym obszarem mojego zainteresowania jest front-end development - budowanie małych i średnich aplikacji internetowych z wykorzystaniem biblioteki React. Dodatkowo w projektach, które tworze, lubię skorzystać z dostępnych API lub stworzyć swoje na własne potrzeby.",
+      other: "Inne narzędzia i technologie",
     },
   },
   work: {
     en: {
       scope: "Scope of work:",
       desc: "Handling Google Tag Manager, creating an internal web application for the team, assisting with affiliate programs, working with marketing data from CM360, DV360, Gemius AdReal systems.",
+      exp: "Experience",
+      projects: "Projects",
     },
     pl: {
       scope: "Zakres pracy:",
       desc: "Obsługa Google Tag Manager, tworzenie wewnętrznej aplikacji internetowej dla zespołu, pomoc przy programach afiliacyjnych, praca z danymi marketingowymi z systemów CM360, DV360, Gemius AdReal.",
+      exp: "Doświadczenie",
+      projects: "Projekty",
     },
   },
 };

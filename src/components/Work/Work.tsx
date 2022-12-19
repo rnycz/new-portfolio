@@ -17,9 +17,9 @@ const Work: React.FC = () => {
   return (
     <div className="work-container">
       <div className="work-exp">
-        <h3>Experience</h3>
+        <h3>{content.exp}</h3>
         <p>
-          <span>04.2021 – 01.2022</span>
+          <span>04.2021 - 01.2022</span>
           <span>
             <b>Staż z Lwem</b> - Expert Team Media, Programmatic & Effectiveness
             | ING Bank Śląski SA | Katowice
@@ -31,7 +31,7 @@ const Work: React.FC = () => {
       </div>
       <div className="work-projects">
         <div className="projects">
-          <h3>Projects</h3>
+          <h3>{content.projects}</h3>
           <ul>
             {projects.map((project) => (
               <li

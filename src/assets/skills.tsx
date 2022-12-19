@@ -8,6 +8,7 @@ import {
   SiNodedotjs,
   SiExpress,
   SiMongodb,
+  SiCypress,
 } from "react-icons/si";
 import { DiGit } from "react-icons/di";
 import { TbApi } from "react-icons/tb";
@@ -35,6 +36,7 @@ export const skills: Icons[] = [
 ];
 
 export const otherSkills: OtherSkills[] = [
+  { icon: <SiCypress />, name: "Cypress", clr: "#04C38E" },
   { icon: <TbDeviceMobile />, name: "RWD", clr: "darkgray" },
   { icon: <TbApi />, name: "REST API", clr: "darkgray" },
   { icon: <DiGit />, name: "Git", clr: "#F1502F" },

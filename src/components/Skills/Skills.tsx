@@ -49,7 +49,7 @@ const Skills: React.FC = () => {
         </div>
       </div>
       <div className="other-stack">
-        <h3>Other tools and technologies</h3>
+        <h3>{content.other}</h3>
         <ul>
           {otherSkills.map((skill) => (
             <li>
