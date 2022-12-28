@@ -1,8 +1,15 @@
 import React, { CSSProperties } from "react";
-import "./Skills.css";
 import { translation } from "../../assets/translations";
 import { useStateContext } from "../../contexts/ContextProvider";
 import { skills, otherSkills } from "../../assets/skills";
+import {
+  SkillsContainer,
+  Desc,
+  IconsDiv,
+  Icon,
+  Stack,
+  OtherStack,
+} from "./Skills.styled";
 
 const Skills: React.FC = () => {
   const { language } = useStateContext();
@@ -13,30 +20,27 @@ const Skills: React.FC = () => {
     : (content = translation.skills.pl);
 
   return (
-    <div className="skills-container">
-      <div className="desc">{content.desc}</div>
-      <div className="icons">
+    <SkillsContainer>
+      <Desc>{content.desc}</Desc>
+      <IconsDiv>
         <ul>
           {skills.map((skill) => (
             <li key={skill.clr}>
-              <span
-                className="icon"
-                style={{ "--clr": skill.clr } as CSSProperties}
-              >
+              <Icon style={{ "--clr": skill.clr } as CSSProperties}>
                 {skill.icon}
-              </span>
+              </Icon>
             </li>
           ))}
         </ul>
-      </div>
-      <div className="stack">
+      </IconsDiv>
+      <Stack>
         <div className="frontend">
           <h3>Frontend</h3>
           <ol>
             <li>HTML5</li>
-            <li>CSS3/SCSS</li>
+            <li>CSS3/SCSS/styled-components</li>
             <li>JavaScript/TypeScript</li>
-            <li>React.js</li>
+            <li>React.js (React Router, Context API)</li>
           </ol>
         </div>
         <div className="backend">
@@ -47,24 +51,21 @@ const Skills: React.FC = () => {
             <li>MongoDB</li>
           </ol>
         </div>
-      </div>
-      <div className="other-stack">
+      </Stack>
+      <OtherStack>
         <h3>{content.other}</h3>
         <ul>
           {otherSkills.map((skill) => (
-            <li>
-              <span
-                className="icon"
-                style={{ "--clr": skill.clr } as CSSProperties}
-              >
+            <li key={skill.name}>
+              <Icon style={{ "--clr": skill.clr } as CSSProperties}>
                 {skill.icon}
-              </span>
+              </Icon>
               <span className="name">{skill.name}</span>
             </li>
           ))}
         </ul>
-      </div>
-    </div>
+      </OtherStack>
+    </SkillsContainer>
   );
 };
 

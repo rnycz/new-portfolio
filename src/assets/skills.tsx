@@ -15,6 +15,7 @@ import { TbApi } from "react-icons/tb";
 import { AiOutlineConsoleSql } from "react-icons/ai";
 import { RiNpmjsFill } from "react-icons/ri";
 import { TbDeviceMobile } from "react-icons/tb";
+import { ReactComponent as StyledComponentsIcon } from "../assets/SVGs/styled-components.svg";
 
 type Icons = {
   icon: JSX.Element;
@@ -27,6 +28,7 @@ export const skills: Icons[] = [
   { icon: <SiHtml5 />, clr: "#f06529" },
   { icon: <SiCss3 />, clr: "#2965f1" },
   { icon: <SiSass />, clr: "#CD6799" },
+  { icon: <StyledComponentsIcon />, clr: "" },
   { icon: <SiJavascript />, clr: "#F0DB4F" },
   { icon: <SiTypescript />, clr: "#007acc" },
   { icon: <SiReact />, clr: "#61DBFB" },

@@ -1,11 +1,6 @@
-header {
-  span {
-    margin-left: -8px;
-    z-index: 11;
-  }
-}
+import styled from "styled-components";
 
-.menu-page {
+export const MenuOnPageElement = styled.div`
   ul {
     transition: 0.3s all ease-in-out;
     padding: 0;
@@ -85,4 +80,4 @@ header {
       }
     }
   }
-}
+`;

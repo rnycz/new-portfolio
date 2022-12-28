@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-footer {
+import styled from "styled-components";
+
+export const FooterElement = styled.footer`
   color: #c5c5c5;
   font-family: "Oswald", sans-serif;
   font-size: 2em;
@@ -19,4 +20,4 @@ footer {
       color: #fff7e9;
     }
   }
-}
+`;

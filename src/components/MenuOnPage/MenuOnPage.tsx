@@ -1,10 +1,10 @@
 import React, { CSSProperties, useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./MenuOnPage.css";
 import { links } from "../../assets/links";
 import { BsSkipBackwardCircle } from "react-icons/bs";
 import { useStateContext } from "../../contexts/ContextProvider";
 import { Squash as Hamburger } from "hamburger-react";
+import { MenuOnPageElement } from "./MenuOnPage.styled";
 
 const MenuOnPage: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -21,7 +21,7 @@ const MenuOnPage: React.FC = () => {
           distance="lg"
         />
       </span>
-      <div className="menu-page">
+      <MenuOnPageElement>
         <ul
           style={{
             opacity: openMenu ? 1 : 0,
@@ -50,7 +50,7 @@ const MenuOnPage: React.FC = () => {
             </NavLink>
           ))}
         </ul>
-      </div>
+      </MenuOnPageElement>
     </>
   );
 };

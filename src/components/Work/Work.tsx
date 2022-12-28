@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import "./Work.css";
 import { projects } from "../../assets/projects";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { translation } from "../../assets/translations";
 import { useStateContext } from "../../contexts/ContextProvider";
+import { BsArrowRight } from "react-icons/bs";
+import {
+  WorkContainer,
+  WorkExp,
+  WorkProjects,
+  ProjectsElement,
+  Images,
+  ImageWrapper,
+} from "./Work.styled";
 
 const Work: React.FC = () => {
   const [open, setOpen] = useState<string>("");
@@ -15,8 +23,8 @@ const Work: React.FC = () => {
     : (content = translation.work.pl);
 
   return (
-    <div className="work-container">
-      <div className="work-exp">
+    <WorkContainer>
+      <WorkExp>
         <h3>{content.exp}</h3>
         <p>
           <span>04.2021 - 01.2022</span>
@@ -28,9 +36,9 @@ const Work: React.FC = () => {
             <b>{content.scope}</b> {content.desc}
           </span>
         </p>
-      </div>
-      <div className="work-projects">
-        <div className="projects">
+      </WorkExp>
+      <WorkProjects>
+        <ProjectsElement>
           <h3>{content.projects}</h3>
           <ul>
             {projects.map((project) => (
@@ -40,7 +48,7 @@ const Work: React.FC = () => {
                 key={project.name}
               >
                 <a href={project.git} target="_blank" rel="noreferrer">
-                  {project.name}
+                  <BsArrowRight className="arrow" /> {project.name}
                 </a>
                 <span>
                   {open === project.name ? (
@@ -52,11 +60,10 @@ const Work: React.FC = () => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="images">
+        </ProjectsElement>
+        <Images>
           {projects.map((project) => (
-            <div
-              className="image-wrapper"
+            <ImageWrapper
               style={{
                 opacity: open === project.name ? 1 : 0,
                 transform: `scale(${open === project.name ? 1 : 0.9})`,
@@ -65,11 +72,11 @@ const Work: React.FC = () => {
             >
               <img src={project.image} alt={project.name} />
               <p>{project.desc}</p>
-            </div>
+            </ImageWrapper>
           ))}
-        </div>
-      </div>
-    </div>
+        </Images>
+      </WorkProjects>
+    </WorkContainer>
   );
 };
 

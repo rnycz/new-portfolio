@@ -1,9 +1,9 @@
 import React, { CSSProperties, useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { links } from "../../assets/links";
-import "./Menu.css";
 import { NavLink } from "react-router-dom";
 import { useStateContext } from "../../contexts/ContextProvider";
+import { MenuElement, MenuToggle } from "./Menu.styled";
 
 const Menu: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<boolean>(false);
@@ -11,10 +11,10 @@ const Menu: React.FC = () => {
 
   return (
     <>
-      <ul className={`menu ${activeMenu ? "active" : ""}`}>
-        <div className="menu-toggle" onClick={() => setActiveMenu(!activeMenu)}>
+      <MenuElement className={`${activeMenu ? "active" : ""}`}>
+        <MenuToggle onClick={() => setActiveMenu(!activeMenu)}>
           <Hamburger size={45} color="#FFF7E9" label="Show menu" />
-        </div>
+        </MenuToggle>
         {links.map((link) => (
           <NavLink to={`/${link.name}`} key={link.name}>
             <li
@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
             </li>
           </NavLink>
         ))}
-      </ul>
+      </MenuElement>
     </>
   );
 };

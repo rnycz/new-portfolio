@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import "./Contact.css";
 import { ImGithub } from "react-icons/im";
 import { SiGmail } from "react-icons/si";
 import { MdContentCopy } from "react-icons/md";
 import { useStateContext } from "../../contexts/ContextProvider";
 import { translation } from "../../assets/translations";
+import {
+  ContactContainer,
+  ContactCell,
+  OpenGithub,
+  CopyDone,
+} from "./Contact.styled";
 
 const Contact: React.FC = () => {
   const { language } = useStateContext();
@@ -26,22 +31,26 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact">
+    <ContactContainer>
+      <ContactCell>
         <div onClick={handleCopy} style={{ position: "relative" }}>
-          {copied && <div className="copy-done">{content.info}</div>}
+          {copied && <CopyDone>{content.info}</CopyDone>}
           <SiGmail className="contact-icons" />
           <MdContentCopy className="contact-copy" />
         </div>
         <p>{mail}</p>
-      </div>
-      <div className="contact">
-        <a href="https://github.com/rnycz" target="_blank" rel="noreferrer">
+      </ContactCell>
+      <ContactCell>
+        <OpenGithub
+          href="https://github.com/rnycz"
+          target="_blank"
+          rel="noreferrer"
+        >
           <ImGithub className="contact-icons" />
           <p>GitHub</p>
-        </a>
-      </div>
-    </div>
+        </OpenGithub>
+      </ContactCell>
+    </ContactContainer>
   );
 };
 

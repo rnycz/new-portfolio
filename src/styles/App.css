@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 body {
   margin: 0;
 }
@@ -48,7 +50,7 @@ body {
   color: gray;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -52%);
+  transform: translate(-50%, -53%);
   font-size: 12em;
   opacity: 0.1;
   cursor: context-menu;

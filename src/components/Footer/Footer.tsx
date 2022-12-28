@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Footer.css";
+import { FooterElement } from "./Footer.styled";
 
 const Footer: React.FC = () => {
   return (
-    <footer>
+    <FooterElement>
       <span>&copy; {new Date().getFullYear()} Radosław Nycz</span>
       <NavLink to="/">&lt;rnycz/&gt;</NavLink>
-    </footer>
+    </FooterElement>
   );
 };
 

@@ -1,4 +1,6 @@
-.menu {
+import styled from "styled-components";
+
+export const MenuElement = styled.ul`
   position: relative;
   width: 400px;
   height: 400px;
@@ -41,42 +43,40 @@
       }
     }
   }
-  .menu-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    width: 75px;
-    height: 75px;
-    background-color: #181d50;
-    border-radius: 50%;
-    box-shadow: 0 0 3px 3px #181d50;
-    transition: 0.5s transform;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.1);
+  &.active {
+    li {
+      transform: rotate(calc(360deg / 4 * var(--rotate))) translateX(40px);
+    }
+    a {
+      transform: translateY(-33px);
     }
   }
-}
-.active {
-  li {
-    transform: rotate(calc(360deg / 4 * var(--rotate))) translateX(40px);
-  }
-  a {
-    transform: translateY(-33px);
-  }
-}
-
-@media (max-width: 480px) {
-  .menu {
+  @media (max-width: 480px) {
     width: 250px;
     a {
       left: -75px !important;
     }
-  }
-  .active {
-    li {
-      transform: rotate(calc(360deg / 4 * var(--rotate))) translateX(70px);
+    &.active {
+      li {
+        transform: rotate(calc(360deg / 4 * var(--rotate))) translateX(70px);
+      }
     }
   }
-}
+`;
+
+export const MenuToggle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 75px;
+  height: 75px;
+  background-color: #181d50;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 3px #181d50;
+  transition: 0.5s transform;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
