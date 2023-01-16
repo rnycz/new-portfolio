@@ -34,7 +34,7 @@ const AboutMe: React.FC = () => {
           <Image index={2} src={myPhoto} alt="second part of me" />
           <Image index={3} src={myPhoto} alt="third part of me" />
         </ImageWrapper>
-        <Resume>
+        <Resume data-cy="resume">
           <a href={ResumeENG} target="_blank" rel="noreferrer">
             EN Resume
           </a>

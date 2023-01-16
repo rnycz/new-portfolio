@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
     <ContactContainer>
       <ContactCell>
         <div onClick={handleCopy} style={{ position: "relative" }}>
-          {copied && <CopyDone>{content.info}</CopyDone>}
+          {copied && <CopyDone data-cy="copy-done">{content.info}</CopyDone>}
           <SiGmail className="contact-icons" />
           <MdContentCopy className="contact-copy" />
         </div>
@@ -45,6 +45,7 @@ const Contact: React.FC = () => {
           href="https://github.com/rnycz"
           target="_blank"
           rel="noreferrer"
+          data-cy="github"
         >
           <ImGithub className="contact-icons" />
           <p>GitHub</p>

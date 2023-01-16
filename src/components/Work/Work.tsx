@@ -38,7 +38,7 @@ const Work: React.FC = () => {
         </p>
       </WorkExp>
       <WorkProjects>
-        <ProjectsElement>
+        <ProjectsElement data-cy="projects">
           <h3>{content.projects}</h3>
           <ul>
             {projects.map((project) => (
@@ -69,6 +69,7 @@ const Work: React.FC = () => {
                 transform: `scale(${open === project.name ? 1 : 0.9})`,
               }}
               key={project.name}
+              data-cy="images"
             >
               <img src={project.image} alt={project.name} />
               <p>{project.desc}</p>

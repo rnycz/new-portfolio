@@ -19,12 +19,13 @@ const Header: React.FC = () => {
       ) : (
         <MenuOnPage />
       )}
-      <HeaderIcons>
+      <HeaderIcons data-cy="header-icons">
         <LanguageSwitch
           onClick={() => {
             setLanguage(language === "EN" ? "PL" : "EN");
             storeLanguage(language === "EN" ? "PL" : "EN");
           }}
+          data-cy="language-switch"
         >
           {language}
         </LanguageSwitch>

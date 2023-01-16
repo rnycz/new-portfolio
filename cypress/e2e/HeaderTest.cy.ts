@@ -1,18 +1,18 @@
 describe("Header test", () => {
   beforeEach(() => {
-    cy.visit("https://radeknycz.netlify.app/");
+    cy.visit("http://localhost:3000/");
   });
   it("Change language", () => {
     if (localStorage.getItem("language") === null) {
-      cy.get(".language-switch").contains("EN");
-      cy.get(".language-switch").click();
-      cy.get(".language-switch").contains("PL");
+      cy.get("[data-cy='language-switch']").contains("EN");
+      cy.get("[data-cy='language-switch']").click();
+      cy.get("[data-cy='language-switch']").contains("PL");
     } else {
-      cy.get(".language-switch").click();
+      cy.get("[data-cy='language-switch']").click();
     }
   });
   it("Open GitHub", () => {
-    cy.get(".header-icons a[href='https://github.com/rnycz']")
+    cy.get("[data-cy='header-icons'] a[href='https://github.com/rnycz']")
       .should("be.visible")
       .then((a: JQuery<HTMLElement>) => {
         expect(a).to.have.attr("target", "_blank");

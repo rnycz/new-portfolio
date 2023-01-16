@@ -21,7 +21,7 @@ const MenuOnPage: React.FC = () => {
           distance="lg"
         />
       </span>
-      <MenuOnPageElement>
+      <MenuOnPageElement data-cy="menu-page">
         <ul
           style={{
             opacity: openMenu ? 1 : 0,
