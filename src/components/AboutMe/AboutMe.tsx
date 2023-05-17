@@ -2,8 +2,6 @@ import React from "react";
 import myPhoto from "../../assets/images/myPhoto.png";
 import { useStateContext } from "../../contexts/ContextProvider";
 import { translation } from "../../assets/translations";
-import ResumeENG from "../../assets/resume/CVeng_Radosław_Nycz.pdf";
-import ResumePL from "../../assets/resume/CV_Radosław_Nycz.pdf";
 import {
   AboutMeContainer,
   AboutMeDesc,
@@ -35,12 +33,10 @@ const AboutMe: React.FC = () => {
           <Image index={3} src={myPhoto} alt="third part of me" />
         </ImageWrapper>
         <Resume data-cy="resume">
-          <a href={ResumeENG} target="_blank" rel="noreferrer">
-            EN Resume
-          </a>
-          <a href={ResumePL} target="_blank" rel="noreferrer">
-            PL CV
-          </a>
+          <button>EN Resume</button>
+          <span className="info">{content.CVinfo}</span>
+          <button>PL CV</button>
+          <span className="info">{content.CVinfo}</span>
         </Resume>
       </Photo>
     </AboutMeContainer>

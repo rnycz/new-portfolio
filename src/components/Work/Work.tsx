@@ -27,13 +27,22 @@ const Work: React.FC = () => {
       <WorkExp>
         <h3>{content.exp}</h3>
         <p>
+          <span>04.2023</span>
+          <span>
+            <b>{content.position}</b> | Asseco Business Solutions | Katowice
+          </span>
+          <span>
+            <b>{content.scope}</b> {content.desc1}
+          </span>
+        </p>
+        <p>
           <span>04.2021 - 01.2022</span>
           <span>
             <b>Staż z Lwem</b> - Expert Team Media, Programmatic & Effectiveness
             | ING Bank Śląski SA | Katowice
           </span>
           <span>
-            <b>{content.scope}</b> {content.desc}
+            <b>{content.scope}</b> {content.desc2}
           </span>
         </p>
       </WorkExp>

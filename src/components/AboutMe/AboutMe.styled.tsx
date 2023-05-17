@@ -24,6 +24,7 @@ export const Photo = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 5px;
 `;
 
 export const ImageWrapper = styled.div`
@@ -64,19 +65,34 @@ export const Resume = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   gap: 10px;
-  a {
-    width: 95px;
+  position: relative;
+  .info {
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    text-align: center;
+    display: none;
+    color: #fff7e9;
+    width: 100%;
+  }
+  button {
+    width: 100px;
     text-align: center;
     color: #fff7e9;
     text-decoration: none;
-    padding: 10px;
+    padding: 12px;
     transition: 0.5s all ease-in-out;
     outline: 2px solid #ff731d;
     border: 2px solid #ff731d;
     outline-offset: -2px;
     transition: outline-offset 0.2s ease-in-out;
+    background-color: transparent;
+    cursor: pointer;
     &:hover {
       outline-offset: -7px;
+      + .info {
+        display: block;
+      }
     }
   }
 `;

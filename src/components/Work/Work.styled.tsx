@@ -12,6 +12,7 @@ export const WorkContainer = styled.div`
 export const WorkExp = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 10px;
   h3 {
     text-align: center;
   }

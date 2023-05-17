@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { ImGithub } from "react-icons/im";
 import { SiGmail } from "react-icons/si";
 import { MdContentCopy } from "react-icons/md";
+import { BsLinkedin } from "react-icons/bs";
 import { useStateContext } from "../../contexts/ContextProvider";
 import { translation } from "../../assets/translations";
 import {
   ContactContainer,
   ContactCell,
-  OpenGithub,
+  OpenLink,
   CopyDone,
 } from "./Contact.styled";
 
@@ -41,7 +42,7 @@ const Contact: React.FC = () => {
         <p>{mail}</p>
       </ContactCell>
       <ContactCell>
-        <OpenGithub
+        <OpenLink
           href="https://github.com/rnycz"
           target="_blank"
           rel="noreferrer"
@@ -49,7 +50,18 @@ const Contact: React.FC = () => {
         >
           <ImGithub className="contact-icons" />
           <p>GitHub</p>
-        </OpenGithub>
+        </OpenLink>
+      </ContactCell>
+      <ContactCell>
+        <OpenLink
+          href="https://www.linkedin.com/in/rados%C5%82aw-nycz-a06008277/"
+          target="_blank"
+          rel="noreferrer"
+          data-cy="linkedin"
+        >
+          <BsLinkedin className="contact-icons" />
+          <p>LinkedIn</p>
+        </OpenLink>
       </ContactCell>
     </ContactContainer>
   );

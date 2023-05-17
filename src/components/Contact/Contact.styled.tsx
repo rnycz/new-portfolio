@@ -54,7 +54,7 @@ export const CopyDone = styled.div`
   transition: 0.3s all;
 `;
 
-export const OpenGithub = styled.a`
+export const OpenLink = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
